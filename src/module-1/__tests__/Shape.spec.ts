@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { Shape } from '../src/Shape';
-import { Point } from '../src/Point';
+import { Shape } from '../Shape';
+import { Point } from '../Point';
 
 class TestShape extends Shape {}
 

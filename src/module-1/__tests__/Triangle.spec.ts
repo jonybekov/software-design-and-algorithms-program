@@ -1,6 +1,6 @@
 // @ts-nocheck
-import { Triangle } from '../src/Triangle';
-import { Point } from '../src/Point';
+import { Triangle } from '../Triangle';
+import { Point } from '../Point';
 
 describe('Triangle', () => {
     it('should be able to create instance of Triangle', () => {
