@@ -2,9 +2,10 @@ export class Point {
     x:number;
     y:number;
 
-    constructor(x: number, y: number) {
-        this.x = x;
-        this.y = y;
+    constructor()
+    constructor(x?: number, y?: number) {
+        this.x = x || 0;
+        this.y = y || 0;
     }
 
     toString(): string {
@@ -15,7 +16,9 @@ export class Point {
         return Math.sqrt(Math.pow(xCoords[0] - xCoords[1], 2) + Math.pow(yCoords[0] - yCoords[1], 2))
     }
 
-    distance(nextX?: Point | number, nextY?: number) {
+    distance():number
+    distance(nextX?: Point):number
+    distance(nextX?: Point | number, nextY?: number):number {
         if(!nextX) {
             return Math.abs(this._calcDistance([this.x, 0], [this.y, 0]))
         }

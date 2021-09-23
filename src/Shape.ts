@@ -3,12 +3,25 @@ import { getShapeMessage, pointsToText } from './utils';
 
 export abstract class Shape {
   abstract getType(): string;
+  protected color: string;
+  protected isFilled: boolean;
+  public points: Point[]
+
 
   constructor(
-    public points: Point[],
-    public color = 'green',
-    public isFilled = true
+    points: Point[],
+    color?: string,
+    isFilled?: boolean
+  ) 
+  constructor(
+    points: Point[],
+    color = 'green',
+    isFilled = true
   ) {
+    this.points = points;
+    this.color = color;
+    this.isFilled = isFilled; 
+
     if (points.length < 3) {
       throw Error('Cannot create shape with 2 points');
     }
