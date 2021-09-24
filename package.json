@@ -10,7 +10,8 @@
     "test:point": "jest test/Point.spec.ts",
     "test:shape": "jest test/Shape.spec.ts",
     "test:triangle": "jest test/Triangle.spec.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:ci": "jest --ci --reporters='default' --reporters='./github-actions-reporter'"
   },
   "author": "",
   "license": "ISC",
