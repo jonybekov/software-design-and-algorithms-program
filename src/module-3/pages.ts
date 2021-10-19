@@ -1,5 +1,16 @@
-const PagesIterableMixin = () => class extends Object {
-    
-}
+import { Page } from './page';
+export class Pages {
+  constructor(private pages: Page[]) {
 
-export class Pages {}
+  }
+
+  getPage(index: number, preText?: string) {
+    const page = this.pages[index];
+    page.setPreText(preText)
+    return page;
+  }
+
+  length() {
+    return this.pages.length;
+  }
+}
